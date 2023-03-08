@@ -16,7 +16,10 @@ class HomeController implements IController {
 		$this->view = new HomeView();
 	}
 
-	public function render(string $action, string $id): string {
-        return $this->view->display([]);
+	public function render(string $action, string $id): array {
+        return [
+			'title' => 'Home',
+			'content' => $this->view->display([]),
+		];
 	}
 }

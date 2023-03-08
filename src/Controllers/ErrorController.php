@@ -20,12 +20,17 @@ class ErrorController implements IController {
         $this->_view = new ErrorView();
     }
 
-	public function render(string $action, string $id): string {
+	public function render(string $action, string $id): array {
+        $title = 'Error';
         $options = ['message' => 'An unknown server-side error occurred.'];
         if($action === '404') {
+            $title = '404';
             $options['message'] = 'This page does not exists.';
         }
 
-        return $this->_view->display($options);
+        return [
+            'title' => $title,
+            'content' => $this->_view->display($options),
+        ];
 	}
 }

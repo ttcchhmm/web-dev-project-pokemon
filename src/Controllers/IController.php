@@ -14,7 +14,7 @@ interface IController {
      * @param string $action The action the controller should perform.
      * @param string $id The ID of the ressource the controller should target.
      * 
-     * @return string The body of the response.
+     * @return array An associative array with 'title' as the page title and 'content' as the body of the response.
      */
-    public function render(string $action, string $id): string;
+    public function render(string $action, string $id): array;
 }

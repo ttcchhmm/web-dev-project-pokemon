@@ -8,7 +8,7 @@
     <base href="/">
     <link rel="stylesheet" href="public/main.css">
 
-    <title>PokéWeb</title>
+    <title>PokéWeb - <?= $response['title'] ?></title>
 </head>
 <body>
     <header>
@@ -16,7 +16,7 @@
     </header>
 
     <div id="content">
-        <?= $content ?>
+        <?= $response['content'] ?>
     </div>
 
     <footer>

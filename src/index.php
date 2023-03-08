@@ -37,7 +37,7 @@ if(isset($_GET['id'])) {
 }
 
 // Render the page.
-$content = '';
+$response = null;
 $found = false;
 $errorController = new ErrorController();
 foreach(routes as $name => $controller) {
@@ -45,9 +45,9 @@ foreach(routes as $name => $controller) {
         $found = true;
         
         try {
-            $content = $controller->render($action, $id);
+            $response = $controller->render($action, $id);
         } catch(\Exception $exception) {
-            $content = $errorController->render('', '');
+            $response = $errorController->render('', '');
         }
 
         break;
@@ -56,7 +56,7 @@ foreach(routes as $name => $controller) {
 
 // If 404.
 if(!$found) {
-    $content = $errorController->render('404', '');
+    $response = $errorController->render('404', '');
 }
 
 require_once('./Views/Template.php');

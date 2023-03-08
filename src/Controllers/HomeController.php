@@ -6,6 +6,9 @@ namespace PokeWeb\Controllers;
 use PokeWeb\Views\IView;
 use PokeWeb\Views\HomeView;
 
+/**
+ * The controller for the /home route.
+ */
 class HomeController implements IController {
 	private IView $view;
 

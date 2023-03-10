@@ -11,7 +11,8 @@ class HomeView implements IView {
         ob_start();
         ?>
 
-        <p>Welcome to PokéWeb !</p>
+        <h1>Welcome to PokéWeb !</h1>
+        <p>Use the menu above to browse the site.</p>
 
         <?php
         return ob_get_clean();

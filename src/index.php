@@ -11,13 +11,8 @@ spl_autoload_register(function (string $class) {
     require implode('/', $parts) . '.php';
 });
 
-use PokeWeb\Controllers\HomeController;
-use PokeWeb\Controllers\ErrorController;
-
-// The controller associated with each route.
-const routes = [
-    'home' => new HomeController(),
-];
+// Get the routes
+require_once('./routes.php');
 
 // Extract the controller/action/id combo.
 $targetController = 'home';
@@ -39,7 +34,6 @@ if(isset($_GET['id'])) {
 // Render the page.
 $response = null;
 $found = false;
-$errorController = new ErrorController();
 foreach(routes as $name => $controller) {
     if($name === $targetController) {
         $found = true;
@@ -47,7 +41,7 @@ foreach(routes as $name => $controller) {
         try {
             $response = $controller->render($action, $id);
         } catch(\Exception $exception) {
-            $response = $errorController->render('', '');
+            $response = routes['error']->render('', '');
         }
 
         break;
@@ -56,7 +50,7 @@ foreach(routes as $name => $controller) {
 
 // If 404.
 if(!$found) {
-    $response = $errorController->render('404', '');
+    $response = routes['error']->render('404', '');
 }
 
 require_once('./Views/Template.php');

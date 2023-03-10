@@ -1,8 +1,28 @@
+* {
+    font-family: 'Noto Sans', 'Verdana', sans-serif;
+}
+
+html, body, #page {
+    height: 100%;
+}
+
 body {
     margin: 0px;
 }
 
+#page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 header, footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 55px;
+
     background-color: #3465af;
     color: white;
 }
@@ -10,4 +30,32 @@ header, footer {
 header h1 {
     margin: 0px;
     padding: 0px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header nav ul li {
+    padding-right: 10px;
+    margin-right: 10px;
+
+    border-right: 2px solid #3496af;
+}
+
+header nav ul li a, header nav ul li a:visited {
+    color: white;
+}
+
+header nav ul li:last-child {
+    border-right: none;
+}
+
+a, a:visited {
+    color: red;
+}
+
+#content {
+    align-self: center;
 }

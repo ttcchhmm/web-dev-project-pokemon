@@ -1,3 +1,11 @@
+<?php
+
+declare(strict_types = 1);
+namespace PokeWeb\Views;
+
+use PokeWeb\Utils\Links;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +19,29 @@
     <title>PokéWeb - <?= $response['title'] ?></title>
 </head>
 <body>
-    <header>
-        <h1>PokéWeb</h1>
-    </header>
+    <div id="page"> <!-- div as the only body's child to workaround browser extensions adding elements to the body tag, breaking flexbox. -->
+        <header>
+            <h1>PokéWeb</h1>
 
-    <div id="content">
-        <?= $response['content'] ?>
+            <nav>
+                <ul>
+                    <li><a href="<?= Links::link('home') ?>">Home</a></li>
+                    <li>Database Test</li>
+                    <li>Edit Pokémon</li>
+                    <li>Logs</li>
+                    <li>Show Pokémon</li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="content">
+            <?= $response['content'] ?>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Tom Chedmail</p>
+            <p>L3 Informatique - Université d'Angers</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2023 Tom Chedmail. Made as an assignment for the web development course.</p>
-    </footer>
 </body>
 </html>

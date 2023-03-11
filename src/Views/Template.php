@@ -21,7 +21,12 @@ use PokeWeb\Utils\Links;
 <body>
     <div id="page"> <!-- div as the only body's child to workaround browser extensions adding elements to the body tag, breaking flexbox. -->
         <header>
-            <h1>PokéWeb</h1>
+            <a href="<?= Links::link('home') ?>" id="branding">
+                <div>
+                    <img src="public/pokeball.svg" alt="Pokeball" id="header-image">
+                    <h1>PokéWeb</h1>
+                </div>
+            </a>
 
             <nav>
                 <ul>

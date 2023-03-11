@@ -7,7 +7,7 @@ use PokeWeb\Views\IView;
 use PokeWeb\Views\ErrorView;
 
 /**
- * The controller used to answer errors. It is not reachable from a route.
+ * The controller used to answer errors.
  * 
  * Actions :
  * - *nothing* : Should be used for any kind of server-side error.

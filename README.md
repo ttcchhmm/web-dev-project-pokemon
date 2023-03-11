@@ -24,7 +24,7 @@ Pour fonctionner, ce site nécessite une base de données (par défaut nommée `
 - Login : `root`
 - Mot de passe : `password`
 
-## Parties
+## Étapes
 ### Partie 1 : Mise en place
 Voici une explication de l’arborescence du projet :
 - [`src/`](src/) : Code source de l'application.

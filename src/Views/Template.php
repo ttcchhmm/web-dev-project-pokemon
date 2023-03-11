@@ -26,7 +26,7 @@ use PokeWeb\Utils\Links;
             <nav>
                 <ul>
                     <li><a href="<?= Links::link('home') ?>">Home</a></li>
-                    <li>Database Test</li>
+                    <li><a href="<?= Links::link('test') ?>">Database Test</a></li>
                     <li>Edit Pokémon</li>
                     <li>Logs</li>
                     <li>Show Pokémon</li>

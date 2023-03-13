@@ -45,7 +45,7 @@ use PokeWeb\Utils\Links;
 
         <footer>
             <p>&copy; 2023 Tom Chedmail</p>
-            <p>L3 Informatique - Université d'Angers</p>
+            <p lang="fr">L3 Informatique - Université d'Angers</p>
         </footer>
     </div>
 </body>

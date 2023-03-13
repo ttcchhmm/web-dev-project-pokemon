@@ -2,12 +2,14 @@
     font-family: 'Noto Sans', 'Verdana', sans-serif;
 }
 
-html, body, #page {
-    height: 100%;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-    margin: 0px;
+    margin: 55px 0px 55px;
+    bottom: 55px;
 }
 
 header, footer {
@@ -17,7 +19,7 @@ header, footer {
     
     height: 55px;
 
-    background-color: #3465af;
+    background-color: #3436afc0;
     color: white;
 }
 
@@ -51,6 +53,20 @@ header nav ul li:last-child {
     border-right: none;
 }
 
+header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+
+    backdrop-filter: blur(2px);
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
 a, a:visited {
     color: red;
 }
@@ -78,7 +94,7 @@ form table tbody tr td label {
 }
 
 #content {
-    align-self: center;
+    margin: auto;
 }
 
 #header-image {
@@ -86,12 +102,6 @@ form table tbody tr td label {
     height: 40px;
 
     padding-right: 20px;
-}
-
-#page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 #branding {
@@ -109,4 +119,14 @@ form table tbody tr td label {
 
 .success p {
     margin: 0px
+}
+
+.center {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }

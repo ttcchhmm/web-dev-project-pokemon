@@ -19,34 +19,34 @@ use PokeWeb\Utils\Links;
     <title>PokéWeb - <?= $response['title'] ?></title>
 </head>
 <body>
-    <div id="page"> <!-- div as the only body's child to workaround browser extensions adding elements to the body tag, breaking flexbox. -->
-        <header>
-            <a href="<?= Links::link('home') ?>" id="branding">
-                <div>
-                    <img src="public/pokeball.svg" alt="Pokeball" id="header-image">
-                    <h1>PokéWeb</h1>
-                </div>
-            </a>
+    <header>
+        <a href="<?= Links::link('home') ?>" id="branding">
+            <div>
+                <img src="public/pokeball.svg" alt="Pokeball" id="header-image">
+                <h1>PokéWeb</h1>
+            </div>
+        </a>
 
-            <nav>
-                <ul>
-                    <li><a href="<?= Links::link('home') ?>">Home</a></li>
-                    <li><a href="<?= Links::link('test') ?>">Database Test</a></li>
-                    <li>Edit Pokémon</li>
-                    <li>Logs</li>
-                    <li>Show Pokémon</li>
-                </ul>
-            </nav>
-        </header>
+        <nav>
+            <ul>
+                <li><a href="<?= Links::link('home') ?>">Home</a></li>
+                <li><a href="<?= Links::link('test') ?>">Database Test</a></li>
+                <li>Edit Pokémon</li>
+                <li>Logs</li>
+                <li>Show Pokémon</li>
+            </ul>
+        </nav>
+    </header>
 
+    <div class="center">
         <div id="content">
             <?= $response['content'] ?>
         </div>
-
-        <footer>
-            <p>&copy; 2023 Tom Chedmail</p>
-            <p lang="fr">L3 Informatique - Université d'Angers</p>
-        </footer>
     </div>
+
+    <footer>
+        <p>&copy; 2023 Tom Chedmail</p>
+        <p lang="fr">L3 Informatique - Université d'Angers</p>
+    </footer>
 </body>
 </html>

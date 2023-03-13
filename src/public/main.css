@@ -130,3 +130,8 @@ form table tbody tr td label {
     align-items: center;
     justify-content: space-between;
 }
+
+.gif {
+    width: 300px;
+    height: auto;
+}

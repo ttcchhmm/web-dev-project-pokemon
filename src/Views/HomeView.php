@@ -11,8 +11,14 @@ class HomeView implements IView {
         ob_start();
         ?>
 
-        <h1>Welcome to PokéWeb !</h1>
-        <p>Use the menu above to browse the site.</p>
+        <div class="center">
+            <div>
+                <h1>Welcome to PokéWeb !</h1>
+                <p>Use the menu above to browse the site.</p>
+            </div>
+
+            <img src="public/eevee.gif" alt="Eevee GIF" class="gif">
+        </div>
 
         <?php
         return ob_get_clean();

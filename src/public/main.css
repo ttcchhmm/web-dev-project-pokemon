@@ -10,12 +10,6 @@ body {
     margin: 0px;
 }
 
-#page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 header, footer {
     display: flex;
     justify-content: space-around;
@@ -30,10 +24,6 @@ header, footer {
 header div {
     display: flex;
     align-items: center;
-}
-
-#branding {
-    text-decoration: none;
 }
 
 header h1 {
@@ -69,6 +59,24 @@ pre {
     font-family: monospace;
 }
 
+button[type=submit] {
+    margin-top: 25px;
+    width: 100%;
+}
+
+select {
+    width: 100%;
+}
+
+form table tbody tr td * {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+form table tbody tr td label {
+    margin-right: 10px;
+}
+
 #content {
     align-self: center;
 }
@@ -78,4 +86,27 @@ pre {
     height: 40px;
 
     padding-right: 20px;
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#branding {
+    text-decoration: none;
+}
+
+.success {
+    border: 1px solid green;
+    background-color: greenyellow;
+
+    padding: 5px;
+
+    margin-bottom: 25px;
+}
+
+.success p {
+    margin: 0px
 }

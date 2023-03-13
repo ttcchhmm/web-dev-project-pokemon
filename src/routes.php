@@ -1,5 +1,6 @@
 <?php
 
+use PokeWeb\Controllers\EditController;
 use PokeWeb\Controllers\HomeController;
 use PokeWeb\Controllers\ErrorController;
 use PokeWeb\Controllers\TestController;
@@ -10,5 +11,6 @@ use PokeWeb\Controllers\TestController;
 const routes = [
     'home' => new HomeController(),
     'test' => new TestController(),
+    'edit' => new EditController(),
     'error' => new ErrorController(),
 ];

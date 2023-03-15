@@ -10,7 +10,7 @@ use PokeWeb\Views\IView;
 /**
  * The controller for the /edit route.
  */
-class EditController implements IController {
+class PokemonController implements IController {
     private IView $_view;
 
     public function __construct() {
@@ -18,6 +18,16 @@ class EditController implements IController {
     }
 
 	public function render(string $action, string $id): array {
+        switch($action) {
+            case 'edit': {
+                return $this->edit();
+            }
+        }
+
+        return routes['error']->render('404', '');
+	}
+
+    private function edit(): array {
         $pokemons = Pokemon::fetchAll();
 
         uasort($pokemons, function(Pokemon $a, Pokemon $b) {
@@ -31,5 +41,5 @@ class EditController implements IController {
                 'pokemons' => $pokemons,
             ])
         ];
-	}
+    }
 }

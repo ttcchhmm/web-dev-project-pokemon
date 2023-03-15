@@ -24,6 +24,15 @@ abstract class XML {
     }
 
     /**
+     * Get an instance of a SimpleXMLElement with the log file loaded into it.
+     * 
+     * @return \SimpleXMLElement A SimpleXMLElement instance with the log file loaded.
+     */
+    public static function getSimpleXML(): \SimpleXMLElement {
+        return simplexml_load_file(XML::LOG_FILE_LOCATION);
+    }
+
+    /**
      * Add an entry at the end of the log file.
      * 
      * @param string $type The type of the operation.

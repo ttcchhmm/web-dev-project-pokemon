@@ -95,6 +95,8 @@ form table tbody tr td label {
 
 #content {
     margin: auto;
+
+    padding-bottom: 10px;
 }
 
 #header-image {
@@ -136,4 +138,14 @@ form table tbody tr td label {
     height: auto;
 
     border-radius: 10px;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table tr td, .table tr th {
+    border: 1px solid black;
+
+    padding: 10px;
 }

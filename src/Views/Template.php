@@ -32,7 +32,7 @@ use PokeWeb\Utils\Links;
                 <li><a href="<?= Links::link('home') ?>">Home</a></li>
                 <li><a href="<?= Links::link('test') ?>">Database Test</a></li>
                 <li><a href="<?= Links::link('pokemon', 'edit') ?>">Edit Pokémon</a></li>
-                <li>Logs</li>
+                <li><a href="<?= Links::link('log') ?>">Logs</a></li>
                 <li>Show Pokémon</li>
             </ul>
         </nav>

@@ -1,5 +1,6 @@
 <?php
 
+use PokeWeb\Controllers\LogController;
 use PokeWeb\Controllers\PokemonController;
 use PokeWeb\Controllers\HomeController;
 use PokeWeb\Controllers\ErrorController;
@@ -12,5 +13,6 @@ const routes = [
     'home' => new HomeController(),
     'test' => new TestController(),
     'pokemon' => new PokemonController(),
+    'log' => new LogController(),
     'error' => new ErrorController(),
 ];

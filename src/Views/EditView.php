@@ -6,6 +6,10 @@ use PokeWeb\Utils\Links;
 
 /**
  * The view used by the /pokemon/edit route.
+ * 
+ * Options:
+ * - success: If this is true, the success message will be displayed.
+ * - pokemons : An array with every Pokémons.
  */
 class EditView implements IView {
 	public function display(array $options): string {
@@ -13,6 +17,7 @@ class EditView implements IView {
 
         echo '<h1>Edit a Pokémon</h1>';
 
+        // Success message.
         if($options['success']) {
             ?>
             
@@ -36,6 +41,7 @@ class EditView implements IView {
                             <select name="pokemon" id="pokemon">
                             <?php
 
+                            // Generate an option tag for every Pokemon.
                             foreach($options['pokemons'] as $pokemon) {
                                 ?>
 

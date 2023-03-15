@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE operations SYSTEM "histo.dtd">
+<!DOCTYPE operations SYSTEM "log.dtd">
 <operations>
     <operation>
         <type>other</type>

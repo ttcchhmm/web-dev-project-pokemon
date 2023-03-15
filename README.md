@@ -43,3 +43,6 @@ Voici une explication de l’arborescence du projet :
 L'application utilise donc un modèle objet dès que possible, en utilisant les fonctionnalités de l'autoloader pour identifier les fichiers PHP qui correspondent à chaque classe (défini dans [`src/index.php`](src/index.php)). Cette organisation a été lourdement inspirée de [Symfony](https://symfony.com/), framework avec lequel j'ai un petit peu d'expérience.
 
 À cette étape, aucune librairie n'a été utilisée.
+
+### Partie 2 : Historisation et XML
+J'utilise l'API `DOMDocument` pour l'écriture au sein du fichier XML, cependant elle est assez impraticable pour naviguer à travers l’arborescence DOM, donc lors de la consultation du fichier j'utilise l'API SimpleXML.

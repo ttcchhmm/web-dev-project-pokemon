@@ -17,7 +17,7 @@ class TestController implements IController {
 
 
 	public function render(string $action, string $id): array {
-        XML::append('View', new \DateTime(), 'Fetched every Pokémon in the database.');
+        XML::append('view', new \DateTime(), 'Fetched every Pokémon in the database.');
 
         $poke = Pokemon::fetchAll();
         return [

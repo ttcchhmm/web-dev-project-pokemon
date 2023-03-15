@@ -8,7 +8,7 @@ use PokeWeb\Views\EditView;
 use PokeWeb\Views\IView;
 
 /**
- * The controller for the /edit route.
+ * The controller for the /pokemon route.
  */
 class PokemonController implements IController {
     private IView $_view;
@@ -27,6 +27,9 @@ class PokemonController implements IController {
         return routes['error']->render('404', '');
 	}
 
+    /**
+     * The /pokemon/edit route.
+     */
     private function edit(): array {
         $pokemons = Pokemon::fetchAll();
 

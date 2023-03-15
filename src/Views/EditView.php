@@ -5,7 +5,7 @@ namespace PokeWeb\Views;
 use PokeWeb\Utils\Links;
 
 /**
- * The view used by EditController.
+ * The view used by the /pokemon/edit route.
  */
 class EditView implements IView {
 	public function display(array $options): string {
@@ -25,7 +25,7 @@ class EditView implements IView {
 
         ?>
 
-        <form action="<?= Links::link('edit') ?>" method="post">
+        <form action="<?= Links::link('pokemon', 'edit') ?>" method="post">
             <table>
                 <tbody>
                     <tr>
@@ -53,7 +53,7 @@ class EditView implements IView {
                             <label for="height">Height : </label>
                         </td>
                         <td>
-                            <input type="number" name="height" id="height" min="1">
+                            <input type="number" name="height" id="height" min="1" value="1" required>
                         </td>
                     </tr>
                     <tr>
@@ -61,7 +61,7 @@ class EditView implements IView {
                             <label for="weight">Weight : </label>
                         </td>
                         <td>
-                            <input type="number" name="weight" id="weight" min="1">
+                            <input type="number" name="weight" id="weight" min="1" value="1" required>
                         </td>
                     </tr>
                     <tr>

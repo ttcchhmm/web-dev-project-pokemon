@@ -46,3 +46,7 @@ L'application utilise donc un modèle objet dès que possible, en utilisant les 
 
 ### Partie 2 : Historisation et XML
 J'utilise l'API `DOMDocument` pour l'écriture au sein du fichier XML, cependant elle est assez impraticable pour naviguer à travers l’arborescence DOM, donc lors de la consultation du fichier j'utilise l'API SimpleXML.
+
+J'ai également profité pour faire des changements esthétiques au site, notamment l'ajout d'un GIF sur la page d'accueil, le header qui reste bloqué en haut de la fenêtre et le header qui est transparent avec un effet de flou quand il y a du contenu derrière.
+
+À cette étape, aucune librairie n'a été utilisée.

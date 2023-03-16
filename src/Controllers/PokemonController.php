@@ -8,21 +8,28 @@ use PokeWeb\Utils\Database;
 use PokeWeb\Utils\XML;
 use PokeWeb\Views\EditView;
 use PokeWeb\Views\IView;
+use PokeWeb\Views\ShowView;
 
 /**
  * The controller for the /pokemon route.
  */
 class PokemonController implements IController {
-    private IView $_view;
+    private IView $_editView;
+    private IView $_showView;
 
     public function __construct() {
-        $this->_view = new EditView();
+        $this->_editView = new EditView();
+        $this->_showView = new ShowView();
     }
 
 	public function render(string $action, string $id): array {
         switch($action) {
             case 'edit': {
                 return $this->edit();
+            }
+
+            case 'show': {
+                return $this->show();
             }
         }
 
@@ -51,10 +58,17 @@ class PokemonController implements IController {
 
         return [
             'title' => 'Edit',
-            'content' => $this->_view->display([
+            'content' => $this->_editView->display([
                 'success' => $success,
                 'pokemons' => $pokemons,
             ])
+        ];
+    }
+
+    private function show(): array {
+        return [
+            'title' => 'Show',
+            'content' => $this->_showView->display([]),
         ];
     }
 }

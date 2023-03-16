@@ -110,6 +110,10 @@ form table tbody tr td label {
     text-decoration: none;
 }
 
+#search-content {
+    display: none;
+}
+
 .success {
     border: 1px solid green;
     background-color: greenyellow;

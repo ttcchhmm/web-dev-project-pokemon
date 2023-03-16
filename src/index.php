@@ -53,4 +53,8 @@ if(!$found) {
     $response = routes['error']->render('404', '');
 }
 
-require_once('./Views/Template.php');
+if(isset($response['hideTemplate']) && $response['hideTemplate']) {
+    echo $response['content'];
+} else {
+    require_once('./Views/Template.php');
+}

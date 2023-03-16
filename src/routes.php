@@ -1,5 +1,6 @@
 <?php
 
+use PokeWeb\Controllers\APIController;
 use PokeWeb\Controllers\LogController;
 use PokeWeb\Controllers\PokemonController;
 use PokeWeb\Controllers\HomeController;
@@ -14,5 +15,6 @@ const routes = [
     'test' => new TestController(),
     'pokemon' => new PokemonController(),
     'log' => new LogController(),
+    'api' => new APIController(),
     'error' => new ErrorController(),
 ];

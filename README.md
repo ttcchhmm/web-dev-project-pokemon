@@ -50,3 +50,5 @@ J'utilise l'API `DOMDocument` pour l'écriture au sein du fichier XML, cependant
 J'ai également profité pour faire des changements esthétiques au site, notamment l'ajout d'un GIF sur la page d'accueil, le header qui reste bloqué en haut de la fenêtre et le header qui est transparent avec un effet de flou quand il y a du contenu derrière.
 
 À cette étape, aucune librairie n'a été utilisée.
+
+> **Important** : En cas de problème de lecture/écriture du fichier d'historisation situé dans [`src/log.xml`](src/log.xml), vérifiez les permissions de ce dernier.

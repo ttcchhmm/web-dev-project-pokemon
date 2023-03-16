@@ -10,7 +10,7 @@ use PokeWeb\Utils\Database;
  * 
  * @template-implements IModel<Pokemon>
  */
-class Pokemon implements IModel {
+class Pokemon implements IModel, \JsonSerializable {
 
     /**
      * The Pokémon's ID.
@@ -41,6 +41,7 @@ class Pokemon implements IModel {
         $this->_id = $id;
         $this->_name = $name;
         $this->_size = $size;
+        $this->_weight = $weight;
         $this->_types = $types;
     }
 
@@ -132,5 +133,16 @@ class Pokemon implements IModel {
         }
 
         return $pokemons;
+	}
+
+
+	public function jsonSerialize(): array {
+        return [
+            'id' => $this->_id,
+            'name' => $this->_name,
+            'weight' => $this->_weight,
+            'size' => $this->_size,
+            'types' => $this->_types,
+        ];
 	}
 }

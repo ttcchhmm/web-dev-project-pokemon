@@ -10,7 +10,7 @@ use PokeWeb\Utils\Database;
  * 
  * @template-implements IModel<Type>
  */
-class Type implements IModel {
+class Type implements IModel, \JsonSerializable {
 
     /**
      * The type's ID.
@@ -45,6 +45,21 @@ class Type implements IModel {
         return $this->_name;
     }
 
+    public function getPokemons(): array {
+        $stt = Database::getPDO()->prepare("SELECT pok_id FROM pokemon_types WHERE type_id = :id");
+        $stt->setFetchMode(\PDO::FETCH_ASSOC);
+        $stt->execute([
+            'id' => $this->_id,
+        ]);
+
+        $pokemons = [];
+        while($record = $stt->fetch()) {
+            $pokemons[] = Pokemon::fetchOne($record['pok_id']);
+        }
+
+        return $pokemons;
+    }
+
     /**
 	 * Return one element by its ID.
 	 *
@@ -76,4 +91,11 @@ class Type implements IModel {
 
         return $types;
     }
+
+	public function jsonSerialize(): array {
+        return [
+            'id' => $this->_id,
+            'name' => $this->_name,
+        ];
+	}
 }

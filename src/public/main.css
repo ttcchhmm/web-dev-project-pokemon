@@ -110,7 +110,7 @@ form table tbody tr td label {
     text-decoration: none;
 }
 
-#search-content {
+.hide {
     display: none;
 }
 

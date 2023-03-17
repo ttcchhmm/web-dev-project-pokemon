@@ -13,12 +13,14 @@ class ShowView implements IView {
             <img src="public/spin.gif" class="gif" alt="">
             <p>Loading, please wait...</p>
         </div>
-        <div id="search-content">
+        <div id="search-content" class="hide">
             <form id="search-form">
                 <label for="type">Type: </label>
                 <select name="type" id="type"></select>
             </form>
         </div>
+
+        <script src="public/show.js" defer></script>
 
         <?php
         return ob_get_clean();

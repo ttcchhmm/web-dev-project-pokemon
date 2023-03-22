@@ -10,7 +10,7 @@ class ShowView implements IView {
 
         <h1>Searching Pokémons by type</h1>
         <div id="loading-animation">
-            <img src="public/spin.gif" class="gif" alt="">
+            <video src="public/spin.mp4" class="gif" autoplay muted disablePictureInPicture loop></video>
             <p>Loading, please wait...</p>
         </div>
         <div id="search-content" class="hide">

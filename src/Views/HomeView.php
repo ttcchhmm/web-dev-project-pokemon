@@ -17,7 +17,7 @@ class HomeView implements IView {
                 <p>Use the menu above to browse the site.</p>
             </div>
 
-            <img src="public/eevee.gif" alt="Eevee GIF" class="gif">
+            <video src="public/eevee.mp4" class="gif" autoplay muted disablePictureInPicture loop></video>
         </div>
 
         <?php

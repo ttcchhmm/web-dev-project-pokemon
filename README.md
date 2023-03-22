@@ -52,3 +52,12 @@ J'ai également profité pour faire des changements esthétiques au site, notamm
 À cette étape, aucune librairie n'a été utilisée.
 
 > **Important** : En cas de problème de lecture/écriture du fichier d'historisation situé dans [`src/log.xml`](src/log.xml), vérifiez les permissions de ce dernier.
+
+### Partie 3 : AJAX
+J'ai ajouté une API avec deux endpoints :
+- `getTypes` : Renvoie la liste des types.
+- `getPokemonsByType` : Renvoie la liste des Pokémons qui correspondent au type donné à l'argument GET `id`.
+
+Ces deux endpoints renvoient une réponse en JSON. Ils sont situés au niveau du contrôleur `api` ([`APIController.php`](src/Controllers/APIController.php)).
+
+À cette étape, aucune librairie n'a été utilisée.

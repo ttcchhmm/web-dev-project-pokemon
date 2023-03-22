@@ -22,6 +22,7 @@ class APIController implements IController {
             }
 
             default: {
+                http_response_code(404);
                 $payload = json_encode(['error' => 'Invalid API endpoint.']);
                 break;
             }

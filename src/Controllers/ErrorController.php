@@ -24,8 +24,11 @@ class ErrorController implements IController {
         $title = 'Error';
         $options = ['message' => 'An unknown server-side error occurred.'];
         if($action === '404') {
+            http_response_code(404);
             $title = '404';
             $options['message'] = 'This page does not exist.';
+        } else {
+            http_response_code(500);
         }
 
         return [

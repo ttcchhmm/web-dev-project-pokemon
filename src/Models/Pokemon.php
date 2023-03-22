@@ -139,7 +139,7 @@ class Pokemon implements IModel, \JsonSerializable {
 	public function jsonSerialize(): array {
         return [
             'id' => $this->_id,
-            'name' => $this->_name,
+            'name' => ucfirst($this->_name),
             'weight' => $this->_weight,
             'size' => $this->_size,
             'types' => $this->_types,
